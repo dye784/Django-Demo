@@ -10,4 +10,6 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 def detail(request, page_id):
-    return HttpResponse("You're looking at page %s." % page_id)
+    context = {'page_id': page_id}
+    return render(request, 'polls/page.html', context)
+    # return HttpResponse("You're looking at page %s." % page_id)
