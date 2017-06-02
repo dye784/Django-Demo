@@ -12,4 +12,3 @@ def index(request):
 def detail(request, page_id):
     context = {'page_id': page_id}
     return render(request, 'polls/page.html', context)
-    # return HttpResponse("You're looking at page %s." % page_id)
